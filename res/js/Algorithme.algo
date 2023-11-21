@@ -1,0 +1,33 @@
+ALGORITHME AnalyserPhrase
+
+VARIABLE:
+  longueurPhrase, nombreMot, nombreVoyelle: Integer
+  phrase: String
+
+DEBUT
+ longueurPhrase <- 0
+ nombreMot <- 0
+ nombreVoyelle <- 0
+
+ // Permettre à l\utilisateur d\entrez une phrase se terminant par un point
+ AFFICHER "Entrez une phrase se terminant par un point(.)"
+ Lire phrase
+
+ // Parcourir chaque caractere de la phrase
+ POUR caractere de 1 À la longueur(phrase):
+  longueurPhrase <- longueurPhrase + 1
+
+  //Verifier le nombre de mot contenu dans la phrase
+  SI caractere <- " "
+    nombreMot <- nombreMot + 1
+  FIN SI
+
+  //Verifier si le caractere est un voyelle
+  SI caractere <- "a" OU caractere <- "o" OU caractere <- "u" OU caractere <- "i" OU caractere <- "e" OU caractere <- "y"
+    nombreVoyelle <- nombreVoyelle + 1 
+  FIN SI
+
+  AFFICHER "Voici un exemple de phrase."
+  FIN POUR
+
+FIN
